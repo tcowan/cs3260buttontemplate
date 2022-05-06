@@ -84,7 +84,7 @@ class ButtonUITestsCS3260: XCTestCase {
 
     }
     
-    func testTextFieldSaysWinterAfter4Taps() {
+    func testTextFieldSaysFallAfter4Taps() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
         XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
 
@@ -98,7 +98,7 @@ class ButtonUITestsCS3260: XCTestCase {
 
     }
     
-    func testScreenIsBlackAfter5Taps() {
+    func testTextFieldSaysWinterAfter5Taps() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
 
         app.buttons["Change"].tap()
@@ -114,4 +114,3 @@ class ButtonUITestsCS3260: XCTestCase {
     }
 
 }
-
