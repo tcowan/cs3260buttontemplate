@@ -33,14 +33,14 @@ class ButtonUITestsCS3260: XCTestCase {
     
     func testButtonsAndTextFieldsArePresent() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
+        XCTAssertTrue(app.staticTexts["season"].exists, "Text field with 'season' not found")
 
     }
         
     func testTextFieldSaysIntialAtStartup() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Field with accessibility labeel 'seasons' button not found")
-        let t = app.staticTexts["seasons"].value! as! String
+        XCTAssertTrue(app.staticTexts["season"].exists, "Field with accessibility label 'season' not found")
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Initial"
 
         XCTAssertTrue(t == "Initial", "Text field should say '\(testString)' upon app startup but instead says '\(t)'.")
@@ -49,10 +49,10 @@ class ButtonUITestsCS3260: XCTestCase {
     
     func testTextFieldSaysWinterAfter1Tap() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
+        XCTAssertTrue(app.staticTexts["season"].exists, "Change button not found")
 
         app.buttons["Change"].tap()
-        let t = app.staticTexts["seasons"].value! as! String
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Winter"
         XCTAssertTrue(t == testString, "Text field should say '\(testString)' after 1 button tap but instead says '\(t)'.")
 
@@ -60,11 +60,11 @@ class ButtonUITestsCS3260: XCTestCase {
  
     func testTextFieldSaysSpringAfter2Taps() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
+        XCTAssertTrue(app.staticTexts["season"].exists, "Change button not found")
 
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
-        let t = app.staticTexts["seasons"].value! as! String
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Spring"
         XCTAssertTrue(t == testString, "Text field should say '\(testString)' after 2 button taps but instead says '\(t)'.")
 
@@ -72,12 +72,12 @@ class ButtonUITestsCS3260: XCTestCase {
 
     func testTextFieldSaysSummerAfter3Taps() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
+        XCTAssertTrue(app.staticTexts["season"].exists, "Change button not found")
 
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
-        let t = app.staticTexts["seasons"].value! as! String
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Summer"
         XCTAssertTrue(t == testString, "Text field should say '\(testString)' after 3 button taps but instead says '\(t)'.")
 
@@ -86,13 +86,13 @@ class ButtonUITestsCS3260: XCTestCase {
     
     func testTextFieldSaysFallAfter4Taps() {
         XCTAssertTrue(app.buttons["Change"].exists, "Change button not found")
-        XCTAssertTrue(app.staticTexts["seasons"].exists, "Change button not found")
+        XCTAssertTrue(app.staticTexts["season"].exists, "Change button not found")
 
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
-        let t = app.staticTexts["seasons"].value! as! String
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Fall"
         XCTAssertTrue(t == testString, "Text field should say '\(testString)' after 4 button taps but instead says '\(t)'.")
 
@@ -107,7 +107,7 @@ class ButtonUITestsCS3260: XCTestCase {
         app.buttons["Change"].tap()
         app.buttons["Change"].tap()
         
-        let t = app.staticTexts["seasons"].value! as! String
+        let t = app.staticTexts["season"].value! as! String
         let testString = "Winter"
         XCTAssertTrue(t == testString, "Text field should say '\(testString)' after 5 button taps but instead says '\(t)'.")
 
